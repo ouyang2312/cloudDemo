@@ -2,21 +2,27 @@ server:
   port: 8001
 
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatisÅäÖÃÎÄ¼şËùÔÚÂ·¾¶
-  type-aliases-package: com.ouyang.cloudapi.entity         # ËùÓĞEntity±ğÃûÀàËùÔÚ°ü
+  config-location: classpath:mybatis/mybatis.cfg.xml  # mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨è·¯å¾„
+  type-aliases-package: com.ouyang.cloudapi.entity  # æ‰€æœ‰Entityåˆ«åç±»æ‰€åœ¨åŒ…
   mapper-locations:
-    - classpath:mybatis/mapper/**/*.xml                      # mapperÓ³ÉäÎÄ¼ş
+    - classpath:mybatis/mapper/**/*.xml # mapperæ˜ å°„æ–‡ä»¶
 spring:
   application:
     name: cloud-provider
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/clouddb1
+    type: com.alibaba.druid.pool.DruidDataSource  # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: com.mysql.jdbc.Driver  # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://localhost:3306/clouddb1 # æ•°æ®åº“åç§°
     username: root
     password: root
     dbcp2:
-      min-idle: 5                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5                                       # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5                                          # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5 # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5 # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5  # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka

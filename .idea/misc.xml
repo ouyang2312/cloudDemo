@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/cloud-api/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-provider-8001/pom.xml" />
         <option value="$PROJECT_DIR$/consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-eureka-7001/pom.xml" />
       </list>
     </option>
   </component>
