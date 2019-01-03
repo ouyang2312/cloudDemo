@@ -10,7 +10,8 @@ import java.util.List;
 @RestController
 public class CustomerConsumerController {
 
-    private static final String REST_URL_PROFIX = "http://localhost:8001";
+    //private static final String REST_URL_PROFIX = "http://localhost:8001";
+    private static final String REST_URL_PROFIX = "http://CLOUD-PROVIDER";
 
     @Autowired
     private RestTemplate restTemplate;
