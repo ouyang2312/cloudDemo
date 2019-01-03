@@ -9,6 +9,8 @@
         <module name="cloud-api" />
         <module name="cloud-consumer-8002" />
         <module name="cloud-eureka-7001" />
+        <module name="cloud-eureka-7002" />
+        <module name="cloud-eureka-7003" />
         <module name="cloud-provider-8001" />
       </profile>
     </annotationProcessing>

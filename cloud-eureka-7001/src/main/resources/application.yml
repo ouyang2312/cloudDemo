@@ -1,11 +1,12 @@
 server:
   port: 7001
+
 eureka:
   instance:
-    hostname: eureka7001.com  #eureka·şÎñ¶ËµÄÊµÀıÃû³Æ
+    hostname: eureka7001.com #eurekaæœåŠ¡ç«¯çš„å®ä¾‹åç§°
   client:
-    register-with-eureka: false #false±íÊ¾²»Ïò×¢²áÖĞĞÄ×¢²á×Ô¼º¡£
-    fetch-registry: false  #false±íÊ¾×Ô¼º¶Ë¾ÍÊÇ×¢²áÖĞĞÄ£¬ÎÒµÄÖ°Ôğ¾ÍÊÇÎ¬»¤·şÎñÊµÀı£¬²¢²»ĞèÒªÈ¥¼ìË÷·şÎñ
+    register-with-eureka: false     #falseè¡¨ç¤ºä¸å‘æ³¨å†Œä¸­å¿ƒæ³¨å†Œè‡ªå·±ã€‚
+    fetch-registry: false     #falseè¡¨ç¤ºè‡ªå·±ç«¯å°±æ˜¯æ³¨å†Œä¸­å¿ƒï¼Œæˆ‘çš„èŒè´£å°±æ˜¯ç»´æŠ¤æœåŠ¡å®ä¾‹ï¼Œå¹¶ä¸éœ€è¦å»æ£€ç´¢æœåŠ¡
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #µ¥»ú defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-                                                                         #ÉèÖÃÓëEureka Server½»»¥µÄµØÖ·²éÑ¯·şÎñºÍ×¢²á·şÎñ¶¼ĞèÒª
+      #å•æœº defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #è®¾ç½®ä¸Eureka Serveräº¤äº’çš„åœ°å€æŸ¥è¯¢æœåŠ¡å’Œæ³¨å†ŒæœåŠ¡éƒ½éœ€è¦ä¾èµ–è¿™ä¸ªåœ°å€ï¼ˆå•æœºï¼‰ã€‚
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
