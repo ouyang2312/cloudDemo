@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/cloud-provider-8003/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-provider-8002/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-provider-8005/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-consumer-feign-8002/pom.xml" />
       </list>
     </option>
   </component>
