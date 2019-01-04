@@ -7,14 +7,24 @@ public class Customer implements Serializable {
     private Integer id;
     private String name;
     private String email;
+    private String dbSource;
 
     public Customer() {
     }
 
-    public Customer(Integer id, String name, String email) {
+    public Customer(Integer id, String name, String email, String dbSource) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.dbSource = dbSource;
+    }
+
+    public String getDbSource() {
+        return dbSource;
+    }
+
+    public void setDbSource(String dbSource) {
+        this.dbSource = dbSource;
     }
 
     public Integer getId() {
@@ -47,6 +57,7 @@ public class Customer implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
+                ", dbSource='" + dbSource + '\'' +
                 '}';
     }
 }

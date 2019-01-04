@@ -12,6 +12,8 @@
         <module name="cloud-eureka-7002" />
         <module name="cloud-eureka-7003" />
         <module name="cloud-provider-8001" />
+        <module name="cloud-provider-8003" />
+        <module name="cloud-provider-8005" />
       </profile>
     </annotationProcessing>
   </component>
