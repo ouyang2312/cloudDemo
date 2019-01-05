@@ -12,6 +12,7 @@
         <module name="cloud-eureka-7001" />
         <module name="cloud-eureka-7002" />
         <module name="cloud-eureka-7003" />
+        <module name="cloud-hystrix-9001" />
         <module name="cloud-provider-8001" />
         <module name="cloud-provider-8003" />
         <module name="cloud-provider-8005" />
