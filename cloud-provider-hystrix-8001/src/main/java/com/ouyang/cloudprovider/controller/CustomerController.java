@@ -6,7 +6,9 @@ import com.ouyang.cloudprovider.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class CustomerController {
@@ -25,6 +27,11 @@ public class CustomerController {
     }
 
 
+    /**
+     * 服务熔断调用的方法，可以自定义返回结果,但是返回的类型必须和注解的方法类型一样
+     * @param id
+     * @return
+     */
     public Customer hystrixMethod(@PathVariable("id") Integer id){
         Customer customer = new Customer(id,"该用户不存在","email是空的","数据库没有该数据");
         return customer;

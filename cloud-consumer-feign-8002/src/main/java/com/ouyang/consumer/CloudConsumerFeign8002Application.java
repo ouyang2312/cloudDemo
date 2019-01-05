@@ -9,7 +9,9 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients(basePackages = {"com.ouyang.cloudapi.service"})//扫描父包下面的CustomerService的FeignClients
-@ComponentScan({"com.ouyang.consumer","com.ouyang.myConfig"})//让spring容器能扫描到自定义的负载规则,顺带测试@ComponentScan注解
+//让spring容器能扫描到自定义的负载规则,顺带测试@ComponentScan注解（所以两个包不合并写 ）
+//第一个注解是扫描父包，第二个注解是扫描轮询配置包（官方说明自定义的轮询包不能放在和springboot启动类当前的包下面）
+@ComponentScan({"com.ouyang","com.ouyang.myConfig"})
 public class CloudConsumerFeign8002Application {
 
     public static void main(String[] args) {
