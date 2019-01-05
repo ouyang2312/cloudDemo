@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/cloud-consumer-feign-8002/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-provider-hystrix-8001/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-hystrix-9001/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul/pom.xml" />
       </list>
     </option>
   </component>

@@ -17,6 +17,7 @@
         <module name="cloud-provider-8003" />
         <module name="cloud-provider-8005" />
         <module name="cloud-provider-hystrix-8001" />
+        <module name="cloud-zuul-gateway-9527" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
