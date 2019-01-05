@@ -1,0 +1,38 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+
+#http://myzuul.com:9527/ouyang/customer/list
+zuul:
+  #ignored-services: cloud-provider
+  prefix: /ouyang
+  ignored-services: "*"
+  routes:
+    provide.serviceId: cloud-provider
+    provide.path: /**
+#http://myzuul.com:9527/ouyang/provide/customer/list
+#zuul:
+    #  #ignored-services: cloud-provider
+    #  prefix: /ouyang
+    #  ignored-services: "*"
+    #  routes:
+    #    provide.serviceId: cloud-provider
+    #    provide.path: /provide/**
+
+info:
+  app.name: springcloud1
+  company.name: www.ouyang.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
