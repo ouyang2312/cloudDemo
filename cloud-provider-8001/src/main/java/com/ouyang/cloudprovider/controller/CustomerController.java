@@ -13,24 +13,25 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @GetMapping(value = "/customer/get/{id}")
-    public Customer get(@PathVariable("id") Integer id){
+    @GetMapping(value = "/customer/geta/{id}")
+    public Customer get(@PathVariable("id") Integer id) {
         return customerService.get(id);
     }
 
 
     /**
      * 如果直接调用该服务 需要用@RequestMapping,这里@PostMapping是让其他地方引用调用
+     *
      * @param customer
      * @return
      */
-    @RequestMapping(value="/customer/add",method = RequestMethod.POST)
-    public boolean add(@RequestBody Customer customer){
+    @RequestMapping(value = "/customer/add", method = RequestMethod.POST)
+    public boolean add(@RequestBody Customer customer) {
         return customerService.add(customer);
     }
 
     @GetMapping(value = "/customer/list")
-    public List<Customer>list(){
+    public List<Customer> list() {
         return customerService.list();
     }
 

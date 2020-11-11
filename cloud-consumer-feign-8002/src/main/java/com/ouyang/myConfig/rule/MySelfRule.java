@@ -11,8 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class MySelfRule {
 
     @Bean
-    public IRule myRule()
-    {
+    public IRule myRule() {
         return new RandomRule_OY();// 自定义为每台机器3次
     }
 

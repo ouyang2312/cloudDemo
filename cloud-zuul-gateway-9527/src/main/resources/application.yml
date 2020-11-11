@@ -21,8 +21,8 @@ zuul:
   routes:
     provide.serviceId: cloud-provider
     provide.path: /**
-#http://myzuul.com:9527/ouyang/provide/customer/list
-#zuul:
+    #http://myzuul.com:9527/ouyang/provide/customer/list
+    #zuul:
     #  #ignored-services: cloud-provider
     #  prefix: /ouyang
     #  ignored-services: "*"

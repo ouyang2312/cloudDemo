@@ -18,6 +18,8 @@
         <module name="cloud-provider-8005" />
         <module name="cloud-provider-hystrix-8001" />
         <module name="cloud-zuul-gateway-9527" />
+        <module name="consumer" />
+        <module name="consumerFeign" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

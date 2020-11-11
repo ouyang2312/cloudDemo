@@ -8,14 +8,12 @@ import com.sun.xml.internal.bind.v2.TODO;
 
 import java.util.List;
 
-public class RandomRule_OY extends AbstractLoadBalancerRule
-{
+public class RandomRule_OY extends AbstractLoadBalancerRule {
 
-    private int total = 0; 			// 总共被调用的次数，目前要求每台被调用5次
-    private int currentIndex = 0;	// 当前提供服务的机器号
+    private int total = 0;            // 总共被调用的次数，目前要求每台被调用5次
+    private int currentIndex = 0;    // 当前提供服务的机器号
 
-    public Server choose(ILoadBalancer lb, Object key)
-    {
+    public Server choose(ILoadBalancer lb, Object key) {
         if (lb == null) {
             return null;
         }
@@ -42,15 +40,13 @@ public class RandomRule_OY extends AbstractLoadBalancerRule
 
 //			private int total = 0; 			// 总共被调用的次数，目前要求每台被调用5次
 //			private int currentIndex = 0;	// 当前提供服务的机器号
-            if(total < 3)
-            {
+            if (total < 3) {
                 server = upList.get(currentIndex);
                 total++;
-            }else {
+            } else {
                 total = 0;
                 currentIndex++;
-                if(currentIndex >= upList.size())
-                {
+                if (currentIndex >= upList.size()) {
                     currentIndex = 0;
                 }
             }
@@ -79,14 +75,12 @@ public class RandomRule_OY extends AbstractLoadBalancerRule
     }
 
     @Override
-    public Server choose(Object key)
-    {
+    public Server choose(Object key) {
         return choose(getLoadBalancer(), key);
     }
 
     @Override
-    public void initWithNiwsConfig(IClientConfig clientConfig)
-    {
+    public void initWithNiwsConfig(IClientConfig clientConfig) {
 
     }
 

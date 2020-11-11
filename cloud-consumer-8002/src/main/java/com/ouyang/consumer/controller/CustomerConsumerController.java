@@ -16,19 +16,19 @@ public class CustomerConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping(value="/consumer/customer/add")
-    public boolean add(Customer customer){
-        return restTemplate.postForObject(REST_URL_PROFIX+"/customer/add",customer,Boolean.class);
+    @RequestMapping(value = "/consumer/customer/add")
+    public boolean add(Customer customer) {
+        return restTemplate.postForObject(REST_URL_PROFIX + "/customer/add", customer, Boolean.class);
     }
 
-    @GetMapping(value="/consumer/customer/get/{id}")
-    public Customer get(@PathVariable("id") Integer id){
-        return restTemplate.getForObject(REST_URL_PROFIX+"/customer/get/"+id,Customer.class);
+    @GetMapping(value = "/consumer/customer/get/{id}")
+    public Customer get(@PathVariable("id") Integer id) {
+        return restTemplate.getForObject(REST_URL_PROFIX + "/customer/get/" + id, Customer.class);
     }
 
-    @GetMapping(value="/consumer/customer/list")
-    public List<Customer> list(){
-        return restTemplate.getForObject(REST_URL_PROFIX+"/customer/list",List.class);
+    @GetMapping(value = "/consumer/customer/list")
+    public List<Customer> list() {
+        return restTemplate.getForObject(REST_URL_PROFIX + "/customer/list", List.class);
     }
 
 }

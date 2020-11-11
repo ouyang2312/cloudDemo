@@ -5,14 +5,14 @@
 <mapper namespace="com.ouyang.cloudprovider.dao.CustomerDao">
 
     <select id="findById" resultType="Customer" parameterType="java.lang.Integer">
-		select * from customer where id = #{id}
-	</select>
+        select * from customer where id = #{id}
+    </select>
     <select id="findAll" resultType="Customer">
-		select * from customer
-	</select>
+        select * from customer
+    </select>
     <insert id="addCustomer" parameterType="Customer">
-		insert  into customer(name,email,db_source) values(#{name},#{email},DATABASE())
-	</insert>
+        insert into customer(name,email,db_source) values(#{name},#{email},DATABASE())
+    </insert>
 
 </mapper>
 

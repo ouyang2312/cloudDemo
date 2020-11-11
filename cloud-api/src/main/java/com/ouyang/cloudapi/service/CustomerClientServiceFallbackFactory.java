@@ -7,17 +7,17 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- *  针对消费者通过feign 不能访问服务 采取的响应
+ * 针对消费者通过feign 不能访问服务 采取的响应
  */
 @Component
 public class CustomerClientServiceFallbackFactory implements FallbackFactory<CustomerService> {
     @Override
     public CustomerService create(Throwable throwable) {
-        return new CustomerService(){
+        return new CustomerService() {
 
             @Override
             public Customer get(Integer id) {
-                Customer customer = new Customer(id,"没有该用户","邮箱是空的","目前数据无法访问");
+                Customer customer = new Customer(id, "没有该用户", "邮箱是空的", "目前数据无法访问");
                 return customer;
             }
 

@@ -13,23 +13,23 @@ public class CustomerConsumerController {
     @Autowired
     private CustomerService customerService;
 
-    @RequestMapping(value="ceshi")
-    public Customer ceshi(){
-        return new Customer(1,"2","2s","aa");
+    @RequestMapping(value = "ceshi")
+    public Customer ceshi() {
+        return new Customer(1, "2", "2s", "aa");
     }
 
-    @RequestMapping(value="/consumer/customer/add")
-    public boolean add(Customer customer){
-        return  customerService.add(customer);
+    @RequestMapping(value = "/consumer/customer/add")
+    public boolean add(Customer customer) {
+        return customerService.add(customer);
     }
 
-    @GetMapping(value="/consumer/customer/get/{id}")
-    public Customer get(@PathVariable("id") Integer id){
+    @GetMapping(value = "/consumer/customer/get/{id}")
+    public Customer get(@PathVariable("id") Integer id) {
         return customerService.get(id);
     }
 
-    @GetMapping(value="/consumer/customer/list")
-    public List<Customer> list(){
+    @GetMapping(value = "/consumer/customer/list")
+    public List<Customer> list() {
         return customerService.list();
     }
 
